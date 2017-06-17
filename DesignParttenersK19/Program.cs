@@ -19,6 +19,13 @@ namespace DesignParttenersK19
             AbstractFactoryUse();
 
             BuilderUse();
+
+            PrototypeUse();
+        }
+
+        private static void PrototypeUse()
+        {
+            
         }
 
         private static void BuilderUse()
@@ -32,6 +39,8 @@ namespace DesignParttenersK19
                 .WithLogo(null)
                 .WithValue(59.90)
                 .BuildBoleto();
+
+            Console.WriteLine(boleto);
         }
 
 
