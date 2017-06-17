@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,6 +48,8 @@
     <Compile Include="AbstractFactory\ICommunicatorFactory.cs" />
     <Compile Include="AbstractFactory\MasterCardCommunicatorFactory.cs" />
     <Compile Include="AbstractFactory\VisaCommunicatorFactory.cs" />
+    <Compile Include="Builder\BBBTicktetBuilder.cs" />
+    <Compile Include="Builder\ITicketBuilder.cs" />
     <Compile Include="CommonBusiness\IReceiver.cs" />
     <Compile Include="FactoryMethod\EmailSender.cs" />
     <Compile Include="CommonBusiness\ISender.cs" />

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DesignParttenersK19.AbstractFactory;
+using DesignParttenersK19.Builder;
 using DesignParttenersK19.CommonBusiness;
 using DesignParttenersK19.FactoryMethod;
 
@@ -16,8 +17,22 @@ namespace DesignParttenersK19
             FactoryMethodUse();
 
             AbstractFactoryUse();
+
+            BuilderUse();
         }
 
+        private static void BuilderUse()
+        {
+            ITicketBuilder ticketBuilder = new BbbTicktetBuilder();
+            Ticket boleto = ticketBuilder.WithBarcode("7899754221212")
+                .WithAssignor("Luís Fernando")
+                .WithOurNumber(777)
+                .WithTakenOut("k19")
+                .WithdExpiration(new DateTime(2017, 12, 11))
+                .WithLogo(null)
+                .WithValue(59.90)
+                .BuildBoleto();
+        }
 
 
         private static void AbstractFactoryUse()
