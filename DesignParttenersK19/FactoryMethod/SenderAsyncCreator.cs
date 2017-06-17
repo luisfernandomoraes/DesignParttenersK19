@@ -1,4 +1,5 @@
 ﻿using System;
+using DesignParttenersK19.CommonBusiness;
 
 namespace DesignParttenersK19.FactoryMethod
 {
@@ -15,7 +16,7 @@ namespace DesignParttenersK19.FactoryMethod
                 case SenderType.Push:
                     return new PushSender();
                 default:
-                    throw new ArgumentOutOfRangeException(nameof(senderType), senderType, "Informe um argumento valido");
+                    throw new ArgumentOutOfRangeException(nameof(senderType), senderType, "Enter a valid argument.");
             }
         }
     }

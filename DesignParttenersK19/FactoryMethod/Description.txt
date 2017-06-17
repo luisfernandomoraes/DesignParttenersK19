@@ -1,0 +1,9 @@
+﻿Goal:
+* Encapsulate the choice of the concrete class to be used in creating objects of a given type.
+
+Practical example:
+* Consider a banking system that needs to send messages to its customers. For example,
+After a purchase with a credit card, an information message
+About the purchase can be sent to the customer.
+If this client to an individual, choose to receive the message through
+Email or SMS. On the other hand, if for a legal entity, you can also receive a message via Java Message Service (JMS).

@@ -43,8 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractFactory\AbstractFactoryHelper.cs" />
+    <Compile Include="AbstractFactory\ICommunicatorFactory.cs" />
+    <Compile Include="AbstractFactory\MasterCardCommunicatorFactory.cs" />
+    <Compile Include="AbstractFactory\VisaCommunicatorFactory.cs" />
+    <Compile Include="CommonBusiness\IReceiver.cs" />
     <Compile Include="FactoryMethod\EmailSender.cs" />
-    <Compile Include="FactoryMethod\ISender.cs" />
+    <Compile Include="CommonBusiness\ISender.cs" />
     <Compile Include="FactoryMethod\PushSender.cs" />
     <Compile Include="FactoryMethod\SenderAsyncCreator.cs" />
     <Compile Include="FactoryMethod\SenderCreator.cs" />
@@ -56,8 +61,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="FactoryMethod\Descrição.txt" />
+    <Content Include="AbstractFactory\Description.txt" />
+    <Content Include="FactoryMethod\Description.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

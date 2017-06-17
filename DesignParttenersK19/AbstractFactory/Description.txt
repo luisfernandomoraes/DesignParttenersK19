@@ -1,0 +1,7 @@
+﻿In the previous section, we have modeled a messaging system using the Factory pattern
+Method. To develop the application that will run on the card machines, we must implement
+Something similar that, in addition to sending messages, also needs to receive.
+Our system will consist of sending and receiving objects. As the communication protocol of each flag is different. As each flag has its own
+Communication protocol, we will have a sender and receiver for each flag.
+We will create specific factories for each flag. These factories will be responsible for
+Of transmitters and receivers. To standardize them, we can create an interface

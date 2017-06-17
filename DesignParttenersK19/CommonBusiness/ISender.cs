@@ -1,4 +1,4 @@
-﻿namespace DesignParttenersK19.FactoryMethod
+﻿namespace DesignParttenersK19.CommonBusiness
 {
     public interface ISender
     {
