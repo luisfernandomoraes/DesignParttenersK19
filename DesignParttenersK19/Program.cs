@@ -7,6 +7,7 @@ using DesignParttenersK19.AbstractFactory;
 using DesignParttenersK19.Builder;
 using DesignParttenersK19.CommonBusiness;
 using DesignParttenersK19.FactoryMethod;
+using DesignParttenersK19.Prototype;
 
 namespace DesignParttenersK19
 {
@@ -25,7 +26,20 @@ namespace DesignParttenersK19
 
         private static void PrototypeUse()
         {
-            
+            Campaign campaign1 = new Campaign
+            {
+                Title = "k19 - C# Development",
+                Description = "Come on to be a great C# developer with K19 courses.",
+                InitDate = DateTime.Now,
+                EndDate = DateTime.Now.AddMonths(3)
+            };
+
+            Console.WriteLine(campaign1);
+
+            Campaign campaign2 = (Campaign)campaign1.Clone();
+            campaign2.EndDate = DateTime.Now.AddMonths(5);
+
+            Console.WriteLine(campaign2);
         }
 
         private static void BuilderUse()

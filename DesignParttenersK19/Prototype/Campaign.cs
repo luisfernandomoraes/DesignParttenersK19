@@ -4,7 +4,7 @@ namespace DesignParttenersK19.Prototype
 {
     /// <summary>
     /// Model class to explain how to Prototype Partner works.
-    /// Well, is just a implementation of ICloneble .NET interface.
+    /// Well, is just a implementation of ICloneble .NET interface. 
     /// </summary>
     public class Campaign:ICloneable
     {
