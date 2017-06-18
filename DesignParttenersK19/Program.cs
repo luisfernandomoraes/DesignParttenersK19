@@ -6,6 +6,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using DesignParttenersK19.AbstractFactory;
 using DesignParttenersK19.Adapter;
+using DesignParttenersK19.Bridge;
 using DesignParttenersK19.Builder;
 using DesignParttenersK19.CommonBusiness;
 using DesignParttenersK19.FactoryMethod;
@@ -29,6 +30,21 @@ namespace DesignParttenersK19
             SingletonUse();
 
             AdapterUse();
+
+            BridgeUse();
+        }
+
+        private static void BridgeUse()
+        {
+            // The bridge partner mean that abstraction should be separated from the implementation code.
+            
+           
+            TxtDocumentGenerator txtDocumentGenerator = new  TxtDocumentGenerator();
+
+            var receipt = new Receipt(txtDocumentGenerator);
+
+            receipt.BuildDocument();
+
         }
 
         private static void AdapterUse()

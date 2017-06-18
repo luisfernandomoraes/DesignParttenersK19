@@ -52,6 +52,11 @@
     <Compile Include="Adapter\NewWorkPointControl.cs" />
     <Compile Include="Adapter\WorkPointControl.cs" />
     <Compile Include="Adapter\WorkPointControlAdapter.cs" />
+    <Compile Include="Bridge\HtmlDocumentGenerator.cs" />
+    <Compile Include="Bridge\IDocument.cs" />
+    <Compile Include="Bridge\IDocumentGenerate.cs" />
+    <Compile Include="Bridge\Receipt.cs" />
+    <Compile Include="Bridge\TxtDocumentGenerator.cs" />
     <Compile Include="Builder\BBBTicktetBuilder.cs" />
     <Compile Include="Builder\ITicketBuilder.cs" />
     <Compile Include="CommonBusiness\IReceiver.cs" />
@@ -73,9 +78,7 @@
     <Content Include="AbstractFactory\Description.txt" />
     <Content Include="FactoryMethod\Description.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Bridge\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
