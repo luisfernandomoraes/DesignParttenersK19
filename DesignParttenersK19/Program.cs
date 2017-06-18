@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using DesignParttenersK19.AbstractFactory;
+using DesignParttenersK19.Adapter;
 using DesignParttenersK19.Builder;
 using DesignParttenersK19.CommonBusiness;
 using DesignParttenersK19.FactoryMethod;
@@ -25,6 +27,23 @@ namespace DesignParttenersK19
             PrototypeUse();
 
             SingletonUse();
+
+            AdapterUse();
+        }
+
+        private static void AdapterUse()
+        {
+            WorkPointControl controleDePonto = new WorkPointControl();
+            Employee funcionario = new Employee{Name = "Luís Fernando Moraes"};
+            controleDePonto.RegistreEntry(funcionario);
+            Thread.Sleep(3000);
+            controleDePonto.RegistreOut(funcionario);
+
+            //After Implementation of Adapter partner
+            controleDePonto = new WorkPointControlAdapter();
+            controleDePonto.RegistreEntry(funcionario);
+            Thread.Sleep(3000);
+            controleDePonto.RegistreOut(funcionario);
         }
 
         private static void SingletonUse()

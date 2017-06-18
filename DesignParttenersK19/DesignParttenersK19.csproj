@@ -48,6 +48,10 @@
     <Compile Include="AbstractFactory\ICommunicatorFactory.cs" />
     <Compile Include="AbstractFactory\MasterCardCommunicatorFactory.cs" />
     <Compile Include="AbstractFactory\VisaCommunicatorFactory.cs" />
+    <Compile Include="Adapter\Employee.cs" />
+    <Compile Include="Adapter\NewWorkPointControl.cs" />
+    <Compile Include="Adapter\WorkPointControl.cs" />
+    <Compile Include="Adapter\WorkPointControlAdapter.cs" />
     <Compile Include="Builder\BBBTicktetBuilder.cs" />
     <Compile Include="Builder\ITicketBuilder.cs" />
     <Compile Include="CommonBusiness\IReceiver.cs" />
