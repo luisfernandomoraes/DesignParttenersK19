@@ -10,6 +10,7 @@ using DesignParttenersK19.Bridge;
 using DesignParttenersK19.Builder;
 using DesignParttenersK19.CommonBusiness;
 using DesignParttenersK19.Composite;
+using DesignParttenersK19.Decorator;
 using DesignParttenersK19.FactoryMethod;
 using DesignParttenersK19.Prototype;
 using DesignParttenersK19.Singleton;
@@ -36,6 +37,21 @@ namespace DesignParttenersK19
 
             CompositeUse();
 
+            DecoratorUse();
+        }
+
+        private static void DecoratorUse()
+        {
+            string message = "A simple message";
+            ISender sender = new EmailSender();
+            sender.Send(message);
+
+            //Using Decorator
+            sender = new SenderWithCriptDecorator(new EmailSender());
+            sender.Send(message);
+
+            sender = new SenderWithCompressionDecorator(new SMSSender());
+            sender.Send(message);
         }
 
         private static void CompositeUse()

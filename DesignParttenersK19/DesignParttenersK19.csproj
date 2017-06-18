@@ -64,6 +64,8 @@
     <Compile Include="Composite\FullWay.cs" />
     <Compile Include="Composite\IWay.cs" />
     <Compile Include="Composite\WalkWay.cs" />
+    <Compile Include="Decorator\SenderDecorator.cs" />
+    <Compile Include="Decorator\SenderWithCriptDecorator.cs" />
     <Compile Include="FactoryMethod\EmailSender.cs" />
     <Compile Include="CommonBusiness\ISender.cs" />
     <Compile Include="FactoryMethod\PushSender.cs" />
