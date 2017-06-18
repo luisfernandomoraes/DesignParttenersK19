@@ -9,6 +9,7 @@ using DesignParttenersK19.Adapter;
 using DesignParttenersK19.Bridge;
 using DesignParttenersK19.Builder;
 using DesignParttenersK19.CommonBusiness;
+using DesignParttenersK19.Composite;
 using DesignParttenersK19.FactoryMethod;
 using DesignParttenersK19.Prototype;
 using DesignParttenersK19.Singleton;
@@ -32,6 +33,24 @@ namespace DesignParttenersK19
             AdapterUse();
 
             BridgeUse();
+
+            CompositeUse();
+
+        }
+
+        private static void CompositeUse()
+        {
+            IWay trecho1 = new WalkWay("Go to Boulevard Broken Dreams with Street Something ",500);
+
+            IWay trecho2 = new WalkWay("Go to Boulevard Broken Dreams with Street Something ", 350);
+
+            FullWay caminho1 = new FullWay();
+            caminho1.Add(trecho1);
+            caminho1.Add(trecho2);
+
+            Console.WriteLine("Way 1: ");
+            caminho1.Print();
+
         }
 
         private static void BridgeUse()
