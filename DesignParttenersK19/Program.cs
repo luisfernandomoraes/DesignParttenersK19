@@ -42,7 +42,7 @@ namespace DesignParttenersK19
             Console.WriteLine(campaign2);
         }
 
-        private static void BuilderUse()
+        private static void BuilderUse()    
         {
             ITicketBuilder ticketBuilder = new BbbTicktetBuilder();
             Ticket boleto = ticketBuilder.WithBarcode("7899754221212")
