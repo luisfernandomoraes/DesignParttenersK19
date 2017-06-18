@@ -8,6 +8,7 @@ using DesignParttenersK19.Builder;
 using DesignParttenersK19.CommonBusiness;
 using DesignParttenersK19.FactoryMethod;
 using DesignParttenersK19.Prototype;
+using DesignParttenersK19.Singleton;
 
 namespace DesignParttenersK19
 {
@@ -22,6 +23,14 @@ namespace DesignParttenersK19
             BuilderUse();
 
             PrototypeUse();
+
+            SingletonUse();
+        }
+
+        private static void SingletonUse()
+        {
+            var config = Configuration.Instance();
+            Console.WriteLine(config);
         }
 
         private static void PrototypeUse()
